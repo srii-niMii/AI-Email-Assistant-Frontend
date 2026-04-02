@@ -58,7 +58,15 @@ const Dashboard = () => {
 
   const createNewThread = async () => {
     try {
-      const res = await api.post("/threads", { title: "New Thread" });
+      const token = localStorage.getItem("token");
+      const res = await api.post("/threads", 
+        { title: "New Thread" },
+          {
+        headers: {
+          Authorization: `Bearer ${token}` 
+        }
+      }
+      );
       const newThread = { id: res.data.id || Date.now(), title: "New Thread", messages: [] };
       setThreads(prev => [newThread, ...prev]);
       setActiveThreadId(newThread.id);
