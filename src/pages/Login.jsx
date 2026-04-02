@@ -39,7 +39,7 @@ export default function Login() {
   };
 
   const handleGoogleLogin = () => {
-    window.location.href = "http://localhost:8080/oauth2/authorization/google";
+    window.location.href = "https://ai-emailassistant-production.up.railway.app/login/oauth2/code/google";
   };
 
   return (
