@@ -67,7 +67,8 @@ const Dashboard = () => {
         }
       }
       );
-      const newThread = { id: res.data.id || Date.now(), title: "New Thread", messages: [] };
+      const newThread = { id: res.data?.id || Date.now(), 
+        title: "New Thread", messages: [] };
       setThreads(prev => [newThread, ...prev]);
       setActiveThreadId(newThread.id);
     } catch (err) {
