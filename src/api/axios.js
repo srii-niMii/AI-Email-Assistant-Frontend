@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://ai-emailassistant-production.up.railway.app",
+  baseURL: "https://ai-email-assistant-pimb.onrender.com",
   headers: {
     "Content-Type": "application/json",
   },
