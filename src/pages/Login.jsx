@@ -39,7 +39,7 @@ export default function Login() {
   };
 
   const handleGoogleLogin = () => {
-    window.location.href = "https://ai-emailassistant-production.up.railway.app/login/oauth2/code/google";
+    window.location.href = "https://ai-email-assistant-pimb.onrender.com/login/oauth2/code/google";
   };
 
   return (
