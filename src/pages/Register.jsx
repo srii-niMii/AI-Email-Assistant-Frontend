@@ -33,6 +33,8 @@ export default function Register() {
       navigate("/dashboard");
     } catch (err) {
       console.error(err);
+      console.error("STATUS:", err.response?.status);
+      console.error("DATA:", err.response?.data);
       const msg = err.response?.data || "Registration failed. Please try again.";
       setError(msg);
     } finally {
