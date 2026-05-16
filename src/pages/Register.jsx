@@ -35,7 +35,7 @@ export default function Register() {
       console.error(err);
       console.error("STATUS:", err.response?.status);
       console.error("DATA:", err.response?.data);
-      const msg = err.response?.data || "Registration failed. Please try again.";
+      const msg = err.response?.data?.message || "Registration failed. Please try again.";
       setError(msg);
     } finally {
       setLoading(false);
