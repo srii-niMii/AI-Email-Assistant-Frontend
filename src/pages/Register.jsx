@@ -91,7 +91,7 @@ export default function Register() {
         <div className="text-center mt-4 text-gray-400 text-sm">
           Already have an account?{" "}
           <span
-            onClick={() => navigate("/login")}
+            onClick={() => navigate("/")}
             className="text-blue-400 cursor-pointer hover:underline"
           >
             Login
